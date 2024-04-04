@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 110vh;
+    background: linear-gradient(90deg, black, gray);
+    position: relative;
+
+
+    .header {
+        h2 {
+            width: 150px;
+            height: 50px;
+            background-color: rgb(189, 146, 37);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0 0 40px 3px;
+            ;
+            gap: 5px;
+            animation: cimcima 2s infinite;
+
+            span {
+                color: white;
+            }
+
+            @keyframes cimcima {
+                0% {
+                    box-shadow: 0 -3px 17px 4px #b3b300;
+                }
+
+                50% {
+                    box-shadow: -2px -6px 35px 5px #f0f038;
+                }
+
+                100% {
+                    box-shadow: 0 -3px 17px 4px #b3b300;
+                }
+            }
+
+        }
+
+        #start {
+            width: 200px;
+            height: 40px;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: darkorchid;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 800;
+            box-shadow: 0 0 25px 1px rgb(235, 85, 225);
+            border: none;
+            border-radius: 20px;
+            transition: 0.5s;
+        }
+
+        #start:hover {
+            transform: scale(1.1);
+            background-color: #C55CFA;
+            ;
+        }
+
+        .colorGame {
+            text-align: center;
+            color: white;
+            width: fit-content;
+            margin: 0 auto;
+            font-size: 60px;
+            font-family: 'Creepster', system-ui;
+            letter-spacing: 3px;
+            cursor: pointer;
+            padding-top: 20px;
+            animation: cimcima1 3s infinite;
+            transition: 0.6s;
+        }
+
+        @keyframes cimcima1 {
+            0% {
+                text-shadow: 0 0 25px rgb(214, 214, 214);
+                color: white;
+            }
+
+            50% {
+                text-shadow: 0 0 15px rgb(214, 214, 214);
+                color: rgb(255, 189, 21);
+            }
+
+            100% {
+                text-shadow: 0 0 25px rgb(214, 214, 214);
+                color: white;
+            }
+        }
+
+        #rgb {
+            font-size: 40px;
+            padding-top: 0;
+            width: fit-content;
+            margin: 15px auto;
+            color: white;
+            font-family: 'Creepster', system-ui;
+            cursor: pointer;
+        }
+
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        #easy {
+            width: 200px;
+            height: 40px;
+            cursor: pointer;
+            border: none;
+            background-color: rgb(91, 27, 94);
+            color: white;
+            font-family: 'Kaushan Script', cursive;
+            font-size: 20px;
+            letter-spacing: 1px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px 1px rgb(157, 53, 162);
+            transition: 0.5s;
+        }
+
+        #easy:hover {
+            background-color: #3C738D;
+            transition: 0.6s;
+        }
+
+        #hard {
+            width: 200px;
+            height: 40px;
+            cursor: pointer;
+            border: none;
+            background-color: rgb(91, 27, 94);
+            color: white;
+            font-family: 'Kaushan Script', cursive;
+            font-size: 20px;
+            letter-spacing: 1px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px 1px rgb(157, 53, 162);
+            transition: 0.5s;
+        }
+
+        #hard:hover {
+            background-color: #8B0000;
+            transition: 0.6s;
+        }
+
+        #result {
+            width: 200px;
+            height: 40px;
+            cursor: pointer;
+            border: none;
+            background-color: rgb(91, 27, 94);
+            color: white;
+            font-family: 'Kaushan Script', cursive;
+            font-size: 20px;
+            letter-spacing: 1px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px 1px rgb(157, 53, 162);
+        }
+
+    }
+}
+
+.boxes {
+    display: flex;
+    width: 640px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: blueviolet;
+        cursor: pointer;
+        border-radius: 8px;
+        box-shadow: inset 0 0 15px 3px rgb(29, 29, 29);
+        transition: 0.5s;
+        animation: cimcima2 3s infinite;
+    }
+
+    .boxrgb {
+        width: 200px;
+        height: 200px;
+        background-color: blueviolet;
+        cursor: pointer;
+        border-radius: 8px;
+        box-shadow: inset 0 0 15px 3px rgb(29, 29, 29);
+        transition: 0.5s;
+        animation: cimcima2 3s infinite;
+    }
+
+    .box1 {
+        display: none;
+    }
+
+    @keyframes cimcima2 {
+        0% {
+            transform: scale(0.98);
+            box-shadow: inset 0 0 10px 3px rgb(0, 0, 0);
+        }
+
+        50% {
+            transform: scale(1);
+            box-shadow: inset 0 0 1px 1px rgb(0, 0, 0);
+        }
+
+        100% {
+            transform: scale(0.98);
+            box-shadow: inset 0 0 10px 3px rgb(0, 0, 0);
+        }
+    }
+
+}
